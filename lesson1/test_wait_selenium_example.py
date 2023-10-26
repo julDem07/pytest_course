@@ -12,6 +12,7 @@ def test_load_button_without_wait():
     load_content_button.click()
   
     welcome_message = driver.find_element(By.XPATH, "//h2")
+    # time.sleep(6)
     
     assert welcome_message.text == "Welcome to the Unstable Load Site!"
 
