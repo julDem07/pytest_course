@@ -50,14 +50,11 @@ def test_incorrect_data(chrome_driver):
 def autologin(chrome_driver):
     chrome_driver.get("https://www.saucedemo.com/")
 
-    username_field = chrome_driver.find_element(By.XPATH, '//input[@data-test="username"]')
-    username_field.send_keys("standard_user")
+    chrome_driver.find_element(By.XPATH, '//input[@data-test="username"]').send_keys("standard_user")
 
-    password_field = chrome_driver.find_element(By.XPATH, '//input[@data-test="password"]')
-    password_field.send_keys("secret_sauce")
+    chrome_driver.find_element(By.XPATH, '//input[@data-test="password"]').send_keys("secret_sauce")
 
-    login_button = chrome_driver.find_element(By.XPATH, '//input[@data-test="login-button"]')
-    login_button.click()
+    chrome_driver.find_element(By.XPATH, '//input[@data-test="login-button"]').click()
 
     yield chrome_driver
 
