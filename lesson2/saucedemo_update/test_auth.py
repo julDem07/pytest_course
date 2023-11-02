@@ -16,6 +16,6 @@ def test_login_form(driver):
     # кликаем на кнопку "Login"
     driver.find_element(By.XPATH, LOGIN_BUTTON).click()
 
-    time.sleep(5)
+    time.sleep(2)
     assert driver.current_url == "https://www.saucedemo.com/inventory.html"
 

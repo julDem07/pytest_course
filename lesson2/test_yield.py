@@ -8,6 +8,7 @@ def example_fixture():
 
 @pytest.fixture
 def sample_data():
+    print("\n--- Setup part of the fixture ---")
     data = {"key": "value"}
     yield data  # передача данных в тестовую функцию
     print("\n--- Teardown part of the fixture ---")

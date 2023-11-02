@@ -20,3 +20,4 @@ def test_registration_with_pre_post_conditions(init_system):
     init_system.register("Алекс", "alex@example.com", "+1234567890")
     users = init_system.view_all_users()
     assert "alex@example.com" in users  # Ожидаемый результат
+
